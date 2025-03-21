@@ -1,15 +1,15 @@
-FROM python:3.12
+FROM metabase/metabase:latest
 
-# WORKDIR /opt
+WORKDIR /opt/visulazation
 
-# # Copy requirements
-# COPY requirements.txt /opt/requirements.txt
+# Copy requirements
+# COPY requirements.txt requirements.txt
 
 # # Install dependencies
-# RUN pip install -r /opt/requirements.txt
+# RUN pip install -r requirements.txt
 
-# # Copy the application code
-# COPY visulazation /opt/visulazation
+# Copy the application code
+COPY . . 
 
-# EXPOSE 8501
-# CMD ["streamlit", "run", "app.py"]
+EXPOSE 3000
+CMD ["java", "-jar", "/app/metabase.jar"]

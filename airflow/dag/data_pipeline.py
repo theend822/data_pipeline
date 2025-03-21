@@ -1,6 +1,7 @@
 from airflow import DAG
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.operators.python import PythonOperator
+from airflow.providers.docker.operators.docker import DockerOperator
 from datetime import datetime
 import os
 from opt.airflow.config import pipeline_config
@@ -44,7 +45,7 @@ with DAG (
         task_id='create_table',
         python_callable=create_pg_table,
         op_kwargs = {
-            "schema_file":"table_schema.sql",
+            "schema_file":"/opt/airflow/database/table_schema.sql",
         },
     )
 
@@ -57,16 +58,11 @@ with DAG (
         },
     )
 
-    dbt_task = PythonOperator(
-        task_id="run_dbt",
-        python_callable=lambda: os.system("dbt run --profiles-dir /usr/app/dbt"),
-        dag=dag
+    dbt_task = DockerOperator(
+        task_id="dbt_execute",
+        image="dbt",
+        docker_url="unix://var/run/docker.sock",
+        volumes=["/opt/airflow/dbt:/opt/dbt"],  # Adjust host path
     )
 
-    visualize_task = PythonOperator(
-        task_id="generate_visualization",
-        python_callable=lambda: os.system("python /app/visualize.py"),
-        dag=dag
-    )
-
-    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_task >> visualize_task
+    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_task 
