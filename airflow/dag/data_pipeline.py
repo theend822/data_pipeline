@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.operators.python import PythonOperator
-from datetime import datetime, timedelta
+from datetime import datetime
 import os
 import pandas as pd
 from sqlalchemy import create_engine
