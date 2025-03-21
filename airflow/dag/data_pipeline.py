@@ -69,7 +69,7 @@ with DAG (
         python_callable=download_data,
         op_kwargs={
             "url":config["data_url"], 
-            "file_path":config["file_path"],
+            "output_raw":config["raw_data_path"],
         },
         dag=dag
     )
@@ -78,7 +78,8 @@ with DAG (
         task_id="process_data",
         python_callable=process_data,
         op_kwargs={
-
+            "input_raw": config["raw_data_path"], 
+            "output_csv": config["processed_data_path"],
         },
         dag=dag
     )
@@ -92,7 +93,7 @@ with DAG (
             "host":config['host'], 
             "port":config['port'], 
             "database":config['database'], 
-            "file_path":config['file_path'], 
+            "file_path":config['processed_data_path'], 
             "table_name":config['table_name'],
         },
         dag=dag
