@@ -1,5 +1,3 @@
-# "file_path":f"/opt/airflow/clean_data/pl_2425_{run_date}.csv",
-
 import re
 import csv
 

@@ -1,9 +1,14 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import os
 
-def ingest_data(user, password, host, port, database, file_path, table_name):
+def ingest_data(file_path, table_name):
+    conn_string = os.getenv("AIRFLOW__CORE__SQL_ALCHEMY_CONN")
+    if not conn_string:
+        raise ValueError("AIRFLOW__CORE__SQL_ALCHEMY_CONN environment variable not set")
+    
     # Database connection
-    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{database}")
+    engine = create_engine(conn_string)
     
     # Read CSV and load to PostgreSQL
     df = pd.read_csv(file_path)

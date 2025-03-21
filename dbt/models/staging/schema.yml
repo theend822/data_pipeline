@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: premier_league_2425_raw
+        description: "Raw Premier League 2024-25 match data ingested by pipeline"
+        tests:
+          - not_null:
+              column_name: matchday
+              severity: error
+          - not_null:
+              column_name: home_team
+              severity: error
+          - not_null:
+              column_name: away_team
+              severity: error
+          - custom_score_format:
+              severity: error
+
+models:
+  - name: stg_pl_2425
+    description: "stage table created after raw table passes dq checks"
+
+tests:
+  - name: custom_score_format
+    description: "Ensures score column is in 'X-Y' format with integers"
+    model: "{{ source('public', 'premier_league_2425_raw') }}"
+    column_name: score
+    test_sql: "score ~ '^[0-9]+-[0-9]+$'"
+    severity: error

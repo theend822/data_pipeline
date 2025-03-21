@@ -5,6 +5,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
@@ -37,6 +39,8 @@ services:
         POSTGRES_USER: ${POSTGRES_USER}
         POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
         POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_HOST: ${POSTGRES_HOST}
+        POSTGRES_PORT: ${POSTGRES_PORT}
         DBT_PROFILES_DIR: /opt/airflow/dbt/
         DBT_PROJECT_DIR: /opt/airflow/dbt/
         DATA_DIR: /opt/airflow/data
@@ -49,14 +53,15 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./dbt:/usr/app/dbt
+      - ./dbt:/opt/dbt
     environment:
-      DBT_PROFILES_DIR: /usr/app/dbt/
-      DBT_PROJECT_DIR: /usr/app/dbt/
+      DBT_PROFILES_DIR: /opt/dbt/
+      DBT_PROJECT_DIR: /opt/dbt/
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_HOST: postgres
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
     restart: "no" # dbt should only run when triggered by Airflow
 
   visualization:

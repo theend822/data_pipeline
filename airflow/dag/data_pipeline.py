@@ -1,16 +1,13 @@
 from airflow import DAG
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 import os
-import pandas as pd
-from sqlalchemy import create_engine
-from opt.airflow.config import config
+from opt.airflow.config import pipeline_config
 from opt.airflow.data_operator import download_data
 from opt.airflow.data_operator import process_data
 from opt.airflow.data_operator import ingest_data
-
+from opt.airflow.database.create_pg_table import create_pg_table
 
 default_args = {
     "owner": "airflow",
@@ -25,78 +22,39 @@ with DAG (
 
 ) as dag: 
 
-    def ingest_data():
-        """Ingest data into PostgreSQL"""
-        DATABASE_URI = "postgresql://airflow:airflow@postgres:5432/airflow"
-        DATA_PATH = "/opt/airflow/data/raw_data.csv"
-        
-        engine = create_engine(DATABASE_URI)
-        df = pd.read_csv(DATA_PATH)
-        df.to_sql("raw_table", engine, if_exists="replace", index=False)
-        print("Data ingested successfully.")
-
-        create_table = SQLExecuteQueryOperator(
-            task_id='create_table',
-            conn_id='my_postgres_connection', # set up in airflow UI
-            sql='sql/table_schema.sql',
-        )
-
-    load_data = PythonOperator(
-        task_id='load_data',
-        python_callable=load_csv_to_postgres,
-        op_kwargs={
-            'file_path':config['file_path'], 
-            'user':config['user'], 
-            'password':config['password'], 
-            'host':config['host'], 
-            'port':config['port'], 
-            'database':config['database'], 
-            'table_name':config['table'],
-        }, # op stands for operator
-    )
-
-    verify_data = SQLExecuteQueryOperator(
-        task_id='verify_data',
-        conn_id='my_postgres_connection',
-        sql='SELECT * FROM airflow_yellow_taxi LIMIT 1',
-        do_xcom_push=True, # without this, query is run and never saved anywhere
-        # with this, query results can be found in verify_data task -> Task Instance Details > XCom.
-    )
-
-
     download_data_task = PythonOperator(
         task_id="download_data",
         python_callable=download_data,
         op_kwargs={
-            "url":config["data_url"], 
-            "output_raw":config["raw_data_path"],
+            "url":pipeline_config["data_url"], 
+            "output_raw":pipeline_config["raw_data_path"],
         },
-        dag=dag
     )
 
     process_data_task = PythonOperator(
         task_id="process_data",
         python_callable=process_data,
         op_kwargs={
-            "input_raw": config["raw_data_path"], 
-            "output_csv": config["processed_data_path"],
+            "input_raw": pipeline_config["raw_data_path"], 
+            "output_csv": pipeline_config["processed_data_path"],
         },
-        dag=dag
+    )
+
+    create_table = SQLExecuteQueryOperator(
+        task_id='create_table',
+        python_callable=create_pg_table,
+        op_kwargs = {
+            "schema_file":"table_schema.sql",
+        },
     )
 
     ingest_data_task = PythonOperator(
         task_id="ingest_data",
         python_callable=ingest_data,
         op_kwargs={
-            "user":config['user'], 
-            "password":config['password'], 
-            "host":config['host'], 
-            "port":config['port'], 
-            "database":config['database'], 
-            "file_path":config['processed_data_path'], 
-            "table_name":config['table_name'],
+            "file_path":pipeline_config['processed_data_path'], 
+            "table_name":pipeline_config['table_name'],
         },
-        dag=dag
     )
 
     dbt_task = PythonOperator(
@@ -111,4 +69,4 @@ with DAG (
         dag=dag
     )
 
-    fetch_task >> ingest_task >> dbt_task >> visualize_task
+    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_task >> visualize_task
