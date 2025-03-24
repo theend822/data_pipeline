@@ -1,0 +1,50 @@
+[2025-03-24T09:31:13.253+0000] {processor.py:186} INFO - Started process (PID=168) to work on /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:31:13.254+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_pipeline.py for tasks to queue
+[2025-03-24T09:31:13.254+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.254+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:31:13.772+0000] {processor.py:925} INFO - DAG(s) 'e2e_data_pipeline' retrieved from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:31:13.849+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.849+0000] {override.py:1912} INFO - Created Permission View: can delete on DAG:e2e_data_pipeline
+[2025-03-24T09:31:13.852+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.852+0000] {override.py:1912} INFO - Created Permission View: can edit on DAG:e2e_data_pipeline
+[2025-03-24T09:31:13.853+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.853+0000] {override.py:1912} INFO - Created Permission View: can read on DAG:e2e_data_pipeline
+[2025-03-24T09:31:13.855+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.855+0000] {override.py:1912} INFO - Created Permission View: can delete on DAG Run:e2e_data_pipeline
+[2025-03-24T09:31:13.856+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.856+0000] {override.py:1912} INFO - Created Permission View: menu access on DAG Run:e2e_data_pipeline
+[2025-03-24T09:31:13.857+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.857+0000] {override.py:1912} INFO - Created Permission View: can create on DAG Run:e2e_data_pipeline
+[2025-03-24T09:31:13.858+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.858+0000] {override.py:1912} INFO - Created Permission View: can read on DAG Run:e2e_data_pipeline
+[2025-03-24T09:31:13.858+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.858+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-24T09:31:13.861+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.861+0000] {dag.py:3262} INFO - Creating ORM DAG for e2e_data_pipeline
+[2025-03-24T09:31:13.861+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:13.861+0000] {dag.py:4180} INFO - Setting next_dagrun for e2e_data_pipeline to None, run_after=None
+[2025-03-24T09:31:13.865+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_pipeline.py took 0.614 seconds
+[2025-03-24T09:31:44.188+0000] {processor.py:186} INFO - Started process (PID=174) to work on /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:31:44.189+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_pipeline.py for tasks to queue
+[2025-03-24T09:31:44.191+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:44.190+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:31:44.362+0000] {processor.py:925} INFO - DAG(s) 'e2e_data_pipeline' retrieved from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:31:44.370+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:44.370+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-24T09:31:44.373+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:31:44.373+0000] {dag.py:4180} INFO - Setting next_dagrun for e2e_data_pipeline to None, run_after=None
+[2025-03-24T09:31:44.378+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_pipeline.py took 0.196 seconds
+[2025-03-24T09:32:14.478+0000] {processor.py:186} INFO - Started process (PID=179) to work on /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:32:14.479+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_pipeline.py for tasks to queue
+[2025-03-24T09:32:14.481+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:32:14.481+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:32:14.656+0000] {processor.py:925} INFO - DAG(s) 'e2e_data_pipeline' retrieved from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:32:14.664+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:32:14.664+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-24T09:32:14.668+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:32:14.668+0000] {dag.py:4180} INFO - Setting next_dagrun for e2e_data_pipeline to None, run_after=None
+[2025-03-24T09:32:14.673+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_pipeline.py took 0.201 seconds
+[2025-03-24T09:32:44.922+0000] {processor.py:186} INFO - Started process (PID=184) to work on /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:32:44.923+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_pipeline.py for tasks to queue
+[2025-03-24T09:32:44.925+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:32:44.925+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:32:45.093+0000] {processor.py:925} INFO - DAG(s) 'e2e_data_pipeline' retrieved from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:32:45.100+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:32:45.100+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-24T09:32:45.104+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:32:45.104+0000] {dag.py:4180} INFO - Setting next_dagrun for e2e_data_pipeline to None, run_after=None
+[2025-03-24T09:32:45.109+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_pipeline.py took 0.193 seconds
+[2025-03-24T09:33:15.199+0000] {processor.py:186} INFO - Started process (PID=189) to work on /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:33:15.201+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_pipeline.py for tasks to queue
+[2025-03-24T09:33:15.203+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:33:15.203+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:33:15.377+0000] {processor.py:925} INFO - DAG(s) 'e2e_data_pipeline' retrieved from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:33:15.385+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:33:15.385+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-24T09:33:15.389+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:33:15.389+0000] {dag.py:4180} INFO - Setting next_dagrun for e2e_data_pipeline to None, run_after=None
+[2025-03-24T09:33:15.394+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_pipeline.py took 0.200 seconds
+[2025-03-24T09:33:45.693+0000] {processor.py:186} INFO - Started process (PID=194) to work on /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:33:45.694+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/data_pipeline.py for tasks to queue
+[2025-03-24T09:33:45.696+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:33:45.696+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:33:45.866+0000] {processor.py:925} INFO - DAG(s) 'e2e_data_pipeline' retrieved from /opt/airflow/dags/data_pipeline.py
+[2025-03-24T09:33:45.874+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:33:45.873+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-24T09:33:45.877+0000] {logging_mixin.py:190} INFO - [2025-03-24T09:33:45.877+0000] {dag.py:4180} INFO - Setting next_dagrun for e2e_data_pipeline to None, run_after=None
+[2025-03-24T09:33:45.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/data_pipeline.py took 0.194 seconds

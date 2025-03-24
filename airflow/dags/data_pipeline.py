@@ -2,13 +2,10 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 from datetime import datetime
-import os
-import sys
-sys.path.append("/opt/airflow")
 from config import pipeline_config
-from data_operator import download_data
-from data_operator import process_data
-from data_operator import ingest_data
+from data_operator.download_data import download_data
+from data_operator.process_data import process_data
+from data_operator.ingest_data import ingest_data
 from database.create_pg_table import create_pg_table
 
 default_args = {

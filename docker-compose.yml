@@ -54,6 +54,23 @@ services:
       command: webserver
       restart: always
   
+  airflow-scheduler:
+    build: airflow/ # same image as your webserver
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    volumes:
+      - ./airflow:/opt/airflow
+      - ./data:/opt/data
+      - ./dbt:/opt/dbt
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+    command: scheduler
+    restart: always
+
   dbt:
     build: dbt/
     image: pl_dbt

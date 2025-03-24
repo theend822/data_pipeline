@@ -17,4 +17,9 @@ postgres_data is the "system file" created by postgres and it outlives the conta
 build: airflow/ 
 docker will look for Dockerfile in the folder to build the container (instead of pulling from docker hub)
 
-airflow scheduler is for daily execution of data pipline. therefore, can be skipped in adhoc pipeline hosted in localhost. 
+[FUCK THIS!!!!] airflow scheduler is for daily execution of data pipline. therefore, can be skipped in adhoc pipeline hosted in localhost. 
+
+AIRFLOW SCHEDULER IS A MUST. OTHERWISE YOU WON'T SEE YOUR DAG TASK IN WEB UI
+
+<!-- docker-compose exec airflow airflow dags list-import-errors -->
+<!-- docker-compose exec airflow airflow dags list -->
