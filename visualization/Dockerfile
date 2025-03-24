@@ -1,4 +1,4 @@
-FROM metabase/metabase:latest
+FROM --platform=linux/amd64 metabase/metabase:latest
 
 WORKDIR /opt/visulazation/metabase
 
@@ -12,4 +12,4 @@ WORKDIR /opt/visulazation/metabase
 COPY . . 
 
 EXPOSE 3000
-CMD ["java", "-jar", "/app/metabase.jar"]
+# CMD ["java", "-jar", "/app/metabase.jar"]
