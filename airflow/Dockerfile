@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/airflow
-COPY airflow /opt/airflow
+COPY . .
 
 USER airflow
 RUN pip install --no-cache-dir -r requirements.txt

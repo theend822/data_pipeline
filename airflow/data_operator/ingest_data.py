@@ -3,9 +3,9 @@ from sqlalchemy import create_engine
 import os
 
 def ingest_data(file_path, table_name):
-    conn_string = os.getenv("AIRFLOW__CORE__SQL_ALCHEMY_CONN")
+    conn_string = os.getenv("AIRFLOW__DATABASE__SQL_ALCHEMY_CONN")
     if not conn_string:
-        raise ValueError("AIRFLOW__CORE__SQL_ALCHEMY_CONN environment variable not set")
+        raise ValueError("AIRFLOW__DATABASE__SQL_ALCHEMY_CONN environment variable not set")
     
     # Database connection
     engine = create_engine(conn_string)

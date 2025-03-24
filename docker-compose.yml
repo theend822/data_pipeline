@@ -5,8 +5,6 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_HOST: ${POSTGRES_HOST}
-      POSTGRES_PORT: ${POSTGRES_PORT}
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     ports:
@@ -18,10 +16,26 @@ services:
       start_period: 10s
       timeout: 5s
 
+  airflow-init:
+    image: apache/airflow:2.10.5
+    entrypoint: /bin/bash
+    command: -c "airflow db init"
+    volumes:
+      - ./airflow:/opt/airflow
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: False
+    depends_on:
+      postgres:
+        condition: service_healthy
   airflow:
       build: airflow/ # build from local folder instead of docker hub
       depends_on:
-        - postgres
+        postgres:
+          condition: service_healthy
+        airflow-init:
+          condition: service_completed_successfully
       ports:
         - "8080:8080"
       volumes:
@@ -31,7 +45,7 @@ services:
         - ./visualization:/opt/visualization
       environment:
         AIRFLOW__CORE__EXECUTOR: LocalExecutor
-        AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+        AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
         POSTGRES_USER: ${POSTGRES_USER}
         POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
         POSTGRES_DB: ${POSTGRES_DB}
@@ -44,7 +58,8 @@ services:
     build: dbt/
     image: pl_dbt
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     volumes:
       - ./dbt:/opt/dbt
     environment:
@@ -60,18 +75,19 @@ services:
   visualization:
     build: visualization/
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     ports:
       - "3000:3000"
     environment:
       MB_DB_TYPE: postgres
       MB_DB_USER: ${POSTGRES_USER}
-      MB_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      MB_DB_PASS: ${POSTGRES_PASSWORD}
       MB_DB_DBNAME: ${POSTGRES_DB}
       MB_DB_PORT: ${POSTGRES_PORT}
       MB_DB_HOST: ${POSTGRES_HOST}
     volumes:
-      - ./metadata:/opt/visualization/metadata
+      - ./visualization:/opt/visualization/metabase
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]

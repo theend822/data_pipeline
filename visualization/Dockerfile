@@ -1,6 +1,6 @@
 FROM metabase/metabase:latest
 
-WORKDIR /opt/visulazation
+WORKDIR /opt/visulazation/metabase
 
 # Copy requirements
 # COPY requirements.txt requirements.txt
