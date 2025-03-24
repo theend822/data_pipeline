@@ -1,7 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
-from datetime import datetime
+from datetime import datetime, timezone
 from config import pipeline_config
 from data_operator.download_data import download_data
 from data_operator.process_data import process_data
@@ -10,7 +10,7 @@ from database.create_pg_table import create_pg_table
 
 default_args = {
     "owner": "airflow",
-    "start_date": datetime(2025, 3, 21),
+    "start_date": datetime(2025, 3, 21, tzinfo=timezone.utc),
 }
 
 with DAG (
@@ -56,9 +56,14 @@ with DAG (
         },
     )
 
-    dbt_transformation_task = BashOperator(
-        task_id="dbt_execute",
-        bash_command="docker exec pl_dbt dbt test --fail-fast && docker exec pl_dbt dbt run"
+    dbt_dq_check = BashOperator(
+        task_id="dbt_dq_check",
+        bash_command="docker exec data_pipeline-dbt-1 dbt test --fail-fast"
     )
 
-    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_transformation_task 
+    dbt_transformation_task = BashOperator(
+        task_id="dbt_execute",
+        bash_command="docker exec data_pipeline-dbt-1 dbt run"
+    )
+
+    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_dq_check >> dbt_transformation_task 

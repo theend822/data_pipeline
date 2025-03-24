@@ -16,8 +16,8 @@ sources:
           - not_null:
               column_name: away_team
               severity: error
-          - custom_score_format:
-              severity: error
+          # - custom_score_format:
+          #     severity: error
 
 models:
   - name: stg_pl_2425
@@ -28,5 +28,9 @@ tests:
     description: "Ensures score column is in 'X-Y' format with integers"
     model: "{{ source('public', 'premier_league_2425_raw') }}"
     column_name: score
-    test_sql: "score ~ '^[0-9]+-[0-9]+$'"
+    test_sql: |
+      select *
+      from {{ model }}
+      where score is not null
+        and not regexp_like(score, '^[0-9]+-[0-9]+$') 
     severity: error

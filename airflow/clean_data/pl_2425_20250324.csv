@@ -1,0 +1,381 @@
+matchday,home_team,away_team,score
+1,Burnley FC,Manchester City FC,0-3
+1,Arsenal FC,Nottingham Forest FC,2-1
+1,AFC Bournemouth,West Ham United FC,1-1
+1,Brighton & Hove Albion FC,Luton Town FC,4-1
+1,Everton FC,Fulham FC,0-1
+1,Sheffield United FC,Crystal Palace FC,0-1
+1,Newcastle United FC,Aston Villa FC,5-1
+1,Brentford FC,Tottenham Hotspur FC,2-2
+1,Chelsea FC,Liverpool FC,1-1
+1,Manchester United FC,Wolverhampton Wanderers FC,1-0
+2,Nottingham Forest FC,Sheffield United FC,2-1
+2,Fulham FC,Brentford FC,0-3
+2,Liverpool FC,AFC Bournemouth,3-1
+2,Wolverhampton Wanderers FC,Brighton & Hove Albion FC,1-4
+2,Tottenham Hotspur FC,Manchester United FC,2-0
+2,Manchester City FC,Newcastle United FC,1-0
+2,Aston Villa FC,Everton FC,4-0
+2,West Ham United FC,Chelsea FC,3-1
+2,Crystal Palace FC,Arsenal FC,0-1
+3,Chelsea FC,Luton Town FC,3-0
+3,AFC Bournemouth,Tottenham Hotspur FC,0-2
+3,Everton FC,Wolverhampton Wanderers FC,0-1
+3,Manchester United FC,Nottingham Forest FC,3-2
+3,Arsenal FC,Fulham FC,2-2
+3,Brentford FC,Crystal Palace FC,1-1
+3,Brighton & Hove Albion FC,West Ham United FC,1-3
+3,Sheffield United FC,Manchester City FC,1-2
+3,Burnley FC,Aston Villa FC,1-3
+3,Newcastle United FC,Liverpool FC,1-2
+4,Luton Town FC,West Ham United FC,1-2
+4,Sheffield United FC,Everton FC,2-2
+4,Brentford FC,AFC Bournemouth,2-2
+4,Burnley FC,Tottenham Hotspur FC,2-5
+4,Chelsea FC,Nottingham Forest FC,0-1
+4,Manchester City FC,Fulham FC,5-1
+4,Brighton & Hove Albion FC,Newcastle United FC,3-1
+4,Crystal Palace FC,Wolverhampton Wanderers FC,3-2
+4,Liverpool FC,Aston Villa FC,3-0
+4,Arsenal FC,Manchester United FC,3-1
+5,Wolverhampton Wanderers FC,Liverpool FC,1-3
+5,Aston Villa FC,Crystal Palace FC,3-1
+5,Fulham FC,Luton Town FC,1-0
+5,Manchester United FC,Brighton & Hove Albion FC,1-3
+5,Tottenham Hotspur FC,Sheffield United FC,2-1
+5,West Ham United FC,Manchester City FC,1-3
+5,Newcastle United FC,Brentford FC,1-0
+5,AFC Bournemouth,Chelsea FC,0-0
+5,Everton FC,Arsenal FC,0-1
+5,Nottingham Forest FC,Burnley FC,1-1
+6,Crystal Palace FC,Fulham FC,0-0
+6,Luton Town FC,Wolverhampton Wanderers FC,1-1
+6,Manchester City FC,Nottingham Forest FC,2-0
+6,Brentford FC,Everton FC,1-3
+6,Burnley FC,Manchester United FC,0-1
+6,Arsenal FC,Tottenham Hotspur FC,2-2
+6,Brighton & Hove Albion FC,AFC Bournemouth,3-1
+6,Chelsea FC,Aston Villa FC,0-1
+6,Liverpool FC,West Ham United FC,3-1
+6,Sheffield United FC,Newcastle United FC,0-8
+7,Aston Villa FC,Brighton & Hove Albion FC,6-1
+7,AFC Bournemouth,Arsenal FC,0-4
+7,Everton FC,Luton Town FC,1-2
+7,Manchester United FC,Crystal Palace FC,0-1
+7,Newcastle United FC,Burnley FC,2-0
+7,West Ham United FC,Sheffield United FC,2-0
+7,Wolverhampton Wanderers FC,Manchester City FC,2-1
+7,Tottenham Hotspur FC,Liverpool FC,2-1
+7,Nottingham Forest FC,Brentford FC,1-1
+7,Fulham FC,Chelsea FC,0-2
+2,Luton Town FC,Burnley FC,1-2
+8,Luton Town FC,Tottenham Hotspur FC,0-1
+8,Burnley FC,Chelsea FC,1-4
+8,Everton FC,AFC Bournemouth,3-0
+8,Fulham FC,Sheffield United FC,3-1
+8,Manchester United FC,Brentford FC,2-1
+8,Crystal Palace FC,Nottingham Forest FC,0-0
+8,Brighton & Hove Albion FC,Liverpool FC,2-2
+8,West Ham United FC,Newcastle United FC,2-2
+8,Wolverhampton Wanderers FC,Aston Villa FC,1-1
+8,Arsenal FC,Manchester City FC,1-0
+9,Liverpool FC,Everton FC,2-0
+9,AFC Bournemouth,Wolverhampton Wanderers FC,1-2
+9,Brentford FC,Burnley FC,3-0
+9,Manchester City FC,Brighton & Hove Albion FC,2-1
+9,Newcastle United FC,Crystal Palace FC,4-0
+9,Nottingham Forest FC,Luton Town FC,2-2
+9,Chelsea FC,Arsenal FC,2-2
+9,Sheffield United FC,Manchester United FC,1-2
+9,Aston Villa FC,West Ham United FC,4-1
+9,Tottenham Hotspur FC,Fulham FC,2-0
+10,Crystal Palace FC,Tottenham Hotspur FC,1-2
+10,Chelsea FC,Brentford FC,0-2
+10,AFC Bournemouth,Burnley FC,2-1
+10,Arsenal FC,Sheffield United FC,5-0
+10,Wolverhampton Wanderers FC,Newcastle United FC,2-2
+10,West Ham United FC,Everton FC,0-1
+10,Aston Villa FC,Luton Town FC,3-1
+10,Brighton & Hove Albion FC,Fulham FC,1-1
+10,Liverpool FC,Nottingham Forest FC,3-0
+10,Manchester United FC,Manchester City FC,0-3
+11,Fulham FC,Manchester United FC,0-1
+11,Brentford FC,West Ham United FC,3-2
+11,Burnley FC,Crystal Palace FC,0-2
+11,Everton FC,Brighton & Hove Albion FC,1-1
+11,Manchester City FC,AFC Bournemouth,6-1
+11,Sheffield United FC,Wolverhampton Wanderers FC,2-1
+11,Newcastle United FC,Arsenal FC,1-0
+11,Nottingham Forest FC,Aston Villa FC,2-0
+11,Luton Town FC,Liverpool FC,1-1
+11,Tottenham Hotspur FC,Chelsea FC,1-4
+12,Wolverhampton Wanderers FC,Tottenham Hotspur FC,2-1
+12,Arsenal FC,Burnley FC,3-1
+12,Crystal Palace FC,Everton FC,2-3
+12,Manchester United FC,Luton Town FC,1-0
+12,AFC Bournemouth,Newcastle United FC,2-0
+12,Aston Villa FC,Fulham FC,3-1
+12,Brighton & Hove Albion FC,Sheffield United FC,1-1
+12,Liverpool FC,Brentford FC,3-0
+12,West Ham United FC,Nottingham Forest FC,3-2
+12,Chelsea FC,Manchester City FC,4-4
+13,Manchester City FC,Liverpool FC,1-1
+13,Burnley FC,West Ham United FC,1-2
+13,Luton Town FC,Crystal Palace FC,2-1
+13,Newcastle United FC,Chelsea FC,4-1
+13,Nottingham Forest FC,Brighton & Hove Albion FC,2-3
+13,Sheffield United FC,AFC Bournemouth,1-3
+13,Brentford FC,Arsenal FC,0-1
+13,Tottenham Hotspur FC,Aston Villa FC,1-2
+13,Everton FC,Manchester United FC,0-3
+13,Fulham FC,Wolverhampton Wanderers FC,3-2
+14,Arsenal FC,Wolverhampton Wanderers FC,2-1
+14,Brentford FC,Luton Town FC,3-1
+14,Burnley FC,Sheffield United FC,5-0
+14,Nottingham Forest FC,Everton FC,0-1
+14,Newcastle United FC,Manchester United FC,1-0
+14,AFC Bournemouth,Aston Villa FC,2-2
+14,Chelsea FC,Brighton & Hove Albion FC,3-2
+14,Liverpool FC,Fulham FC,4-3
+14,West Ham United FC,Crystal Palace FC,1-1
+14,Manchester City FC,Tottenham Hotspur FC,3-3
+15,Wolverhampton Wanderers FC,Burnley FC,1-0
+15,Luton Town FC,Arsenal FC,3-4
+15,Brighton & Hove Albion FC,Brentford FC,2-1
+15,Fulham FC,Nottingham Forest FC,5-0
+15,Sheffield United FC,Liverpool FC,0-2
+15,Crystal Palace FC,AFC Bournemouth,0-2
+15,Aston Villa FC,Manchester City FC,1-0
+15,Manchester United FC,Chelsea FC,2-1
+15,Everton FC,Newcastle United FC,3-0
+15,Tottenham Hotspur FC,West Ham United FC,1-2
+16,Crystal Palace FC,Liverpool FC,1-2
+16,Brighton & Hove Albion FC,Burnley FC,1-1
+16,Manchester United FC,AFC Bournemouth,0-3
+16,Sheffield United FC,Brentford FC,1-0
+16,Wolverhampton Wanderers FC,Nottingham Forest FC,1-1
+16,Aston Villa FC,Arsenal FC,1-0
+16,Everton FC,Chelsea FC,2-0
+16,Fulham FC,West Ham United FC,5-0
+16,Luton Town FC,Manchester City FC,1-2
+16,Tottenham Hotspur FC,Newcastle United FC,4-1
+17,Nottingham Forest FC,Tottenham Hotspur FC,0-2
+17,Chelsea FC,Sheffield United FC,2-0
+17,Manchester City FC,Crystal Palace FC,2-2
+17,Newcastle United FC,Fulham FC,3-0
+17,Burnley FC,Everton FC,0-2
+17,Arsenal FC,Brighton & Hove Albion FC,2-0
+17,Brentford FC,Aston Villa FC,1-2
+17,West Ham United FC,Wolverhampton Wanderers FC,3-0
+17,Liverpool FC,Manchester United FC,0-0
+18,Crystal Palace FC,Brighton & Hove Albion FC,1-1
+18,Aston Villa FC,Sheffield United FC,1-1
+18,West Ham United FC,Manchester United FC,2-0
+18,Fulham FC,Burnley FC,0-2
+18,Luton Town FC,Newcastle United FC,1-0
+18,Nottingham Forest FC,AFC Bournemouth,2-3
+18,Tottenham Hotspur FC,Everton FC,2-1
+18,Liverpool FC,Arsenal FC,1-1
+18,Wolverhampton Wanderers FC,Chelsea FC,2-1
+19,Newcastle United FC,Nottingham Forest FC,1-3
+19,AFC Bournemouth,Fulham FC,3-0
+19,Sheffield United FC,Luton Town FC,2-3
+19,Burnley FC,Liverpool FC,0-2
+19,Manchester United FC,Aston Villa FC,3-2
+19,Brentford FC,Wolverhampton Wanderers FC,1-4
+19,Chelsea FC,Crystal Palace FC,2-1
+19,Everton FC,Manchester City FC,1-3
+19,Brighton & Hove Albion FC,Tottenham Hotspur FC,4-2
+19,Arsenal FC,West Ham United FC,0-2
+20,Luton Town FC,Chelsea FC,2-3
+20,Aston Villa FC,Burnley FC,3-2
+20,Crystal Palace FC,Brentford FC,3-1
+20,Manchester City FC,Sheffield United FC,2-0
+20,Wolverhampton Wanderers FC,Everton FC,3-0
+20,Nottingham Forest FC,Manchester United FC,2-1
+20,Fulham FC,Arsenal FC,2-1
+20,Tottenham Hotspur FC,AFC Bournemouth,3-1
+20,Liverpool FC,Newcastle United FC,4-2
+20,West Ham United FC,Brighton & Hove Albion FC,0-0
+21,Burnley FC,Luton Town FC,1-1
+21,Chelsea FC,Fulham FC,1-0
+21,Newcastle United FC,Manchester City FC,2-3
+21,Everton FC,Aston Villa FC,0-0
+21,Manchester United FC,Tottenham Hotspur FC,2-2
+21,Arsenal FC,Crystal Palace FC,5-0
+21,Brentford FC,Nottingham Forest FC,3-2
+21,Sheffield United FC,West Ham United FC,2-2
+21,AFC Bournemouth,Liverpool FC,0-4
+21,Brighton & Hove Albion FC,Wolverhampton Wanderers FC,0-0
+22,Nottingham Forest FC,Arsenal FC,1-2
+22,Luton Town FC,Brighton & Hove Albion FC,4-0
+22,Fulham FC,Everton FC,0-0
+22,Crystal Palace FC,Sheffield United FC,3-2
+22,Aston Villa FC,Newcastle United FC,1-3
+22,Tottenham Hotspur FC,Brentford FC,3-2
+22,Manchester City FC,Burnley FC,3-1
+22,Liverpool FC,Chelsea FC,4-1
+22,West Ham United FC,AFC Bournemouth,1-1
+22,Wolverhampton Wanderers FC,Manchester United FC,3-4
+23,Everton FC,Tottenham Hotspur FC,2-2
+23,Brighton & Hove Albion FC,Crystal Palace FC,4-1
+23,Burnley FC,Fulham FC,2-2
+23,Newcastle United FC,Luton Town FC,4-4
+23,Sheffield United FC,Aston Villa FC,0-5
+23,AFC Bournemouth,Nottingham Forest FC,1-1
+23,Chelsea FC,Wolverhampton Wanderers FC,2-4
+23,Manchester United FC,West Ham United FC,3-0
+23,Arsenal FC,Liverpool FC,3-1
+23,Brentford FC,Manchester City FC,1-3
+24,Manchester City FC,Everton FC,2-0
+24,Fulham FC,AFC Bournemouth,3-1
+24,Liverpool FC,Burnley FC,3-1
+24,Luton Town FC,Sheffield United FC,1-3
+24,Tottenham Hotspur FC,Brighton & Hove Albion FC,2-1
+24,Wolverhampton Wanderers FC,Brentford FC,0-2
+24,Nottingham Forest FC,Newcastle United FC,2-3
+24,West Ham United FC,Arsenal FC,0-6
+24,Aston Villa FC,Manchester United FC,1-2
+24,Crystal Palace FC,Chelsea FC,1-3
+25,Brentford FC,Liverpool FC,1-4
+25,Burnley FC,Arsenal FC,0-5
+25,Fulham FC,Aston Villa FC,1-2
+25,Newcastle United FC,AFC Bournemouth,2-2
+25,Nottingham Forest FC,West Ham United FC,2-0
+25,Tottenham Hotspur FC,Wolverhampton Wanderers FC,1-2
+25,Manchester City FC,Chelsea FC,1-1
+25,Sheffield United FC,Brighton & Hove Albion FC,0-5
+25,Luton Town FC,Manchester United FC,1-2
+25,Everton FC,Crystal Palace FC,1-1
+18,Manchester City FC,Brentford FC,1-0
+26,Liverpool FC,Luton Town FC,4-1
+26,Aston Villa FC,Nottingham Forest FC,4-2
+26,Brighton & Hove Albion FC,Everton FC,1-1
+26,Crystal Palace FC,Burnley FC,3-0
+26,Manchester United FC,Fulham FC,1-2
+26,AFC Bournemouth,Manchester City FC,0-1
+26,Arsenal FC,Newcastle United FC,4-1
+26,Wolverhampton Wanderers FC,Sheffield United FC,1-0
+26,West Ham United FC,Brentford FC,4-2
+27,Brentford FC,Chelsea FC,2-2
+27,Everton FC,West Ham United FC,1-3
+27,Fulham FC,Brighton & Hove Albion FC,3-0
+27,Newcastle United FC,Wolverhampton Wanderers FC,3-0
+27,Nottingham Forest FC,Liverpool FC,0-1
+27,Tottenham Hotspur FC,Crystal Palace FC,3-1
+27,Luton Town FC,Aston Villa FC,2-3
+27,Burnley FC,AFC Bournemouth,0-2
+27,Manchester City FC,Manchester United FC,3-1
+27,Sheffield United FC,Arsenal FC,0-6
+28,Manchester United FC,Everton FC,2-0
+28,AFC Bournemouth,Sheffield United FC,2-2
+28,Crystal Palace FC,Luton Town FC,1-1
+28,Wolverhampton Wanderers FC,Fulham FC,2-1
+28,Arsenal FC,Brentford FC,2-1
+28,Aston Villa FC,Tottenham Hotspur FC,0-4
+28,Brighton & Hove Albion FC,Nottingham Forest FC,1-0
+28,West Ham United FC,Burnley FC,2-2
+28,Liverpool FC,Manchester City FC,1-1
+28,Chelsea FC,Newcastle United FC,3-2
+17,AFC Bournemouth,Luton Town FC,4-3
+29,Burnley FC,Brentford FC,2-1
+29,Luton Town FC,Nottingham Forest FC,1-1
+29,Fulham FC,Tottenham Hotspur FC,3-0
+29,West Ham United FC,Aston Villa FC,1-1
+30,Newcastle United FC,West Ham United FC,4-3
+30,AFC Bournemouth,Everton FC,2-1
+30,Chelsea FC,Burnley FC,2-2
+30,Nottingham Forest FC,Crystal Palace FC,1-1
+30,Sheffield United FC,Fulham FC,3-3
+30,Tottenham Hotspur FC,Luton Town FC,2-1
+30,Aston Villa FC,Wolverhampton Wanderers FC,2-0
+30,Brentford FC,Manchester United FC,1-1
+30,Liverpool FC,Brighton & Hove Albion FC,2-1
+30,Manchester City FC,Arsenal FC,0-0
+31,Nottingham Forest FC,Fulham FC,3-1
+31,Newcastle United FC,Everton FC,1-1
+31,AFC Bournemouth,Crystal Palace FC,1-0
+31,Burnley FC,Wolverhampton Wanderers FC,1-1
+31,West Ham United FC,Tottenham Hotspur FC,1-1
+31,Arsenal FC,Luton Town FC,2-0
+31,Brentford FC,Brighton & Hove Albion FC,0-0
+31,Manchester City FC,Aston Villa FC,4-1
+31,Liverpool FC,Sheffield United FC,3-1
+31,Chelsea FC,Manchester United FC,4-3
+32,Crystal Palace FC,Manchester City FC,2-4
+32,Aston Villa FC,Brentford FC,3-3
+32,Everton FC,Burnley FC,1-0
+32,Fulham FC,Newcastle United FC,0-1
+32,Luton Town FC,AFC Bournemouth,2-1
+32,Wolverhampton Wanderers FC,West Ham United FC,1-2
+32,Brighton & Hove Albion FC,Arsenal FC,0-3
+32,Manchester United FC,Liverpool FC,2-2
+32,Sheffield United FC,Chelsea FC,2-2
+32,Tottenham Hotspur FC,Nottingham Forest FC,3-1
+33,Newcastle United FC,Tottenham Hotspur FC,4-0
+33,Brentford FC,Sheffield United FC,2-0
+33,Burnley FC,Brighton & Hove Albion FC,1-1
+33,Manchester City FC,Luton Town FC,5-1
+33,Nottingham Forest FC,Wolverhampton Wanderers FC,2-2
+33,AFC Bournemouth,Manchester United FC,2-2
+33,Liverpool FC,Crystal Palace FC,0-1
+33,West Ham United FC,Fulham FC,0-2
+33,Arsenal FC,Aston Villa FC,0-2
+33,Chelsea FC,Everton FC,6-0
+34,Luton Town FC,Brentford FC,1-5
+34,Sheffield United FC,Burnley FC,1-4
+34,Wolverhampton Wanderers FC,Arsenal FC,0-2
+34,Everton FC,Nottingham Forest FC,2-0
+34,Aston Villa FC,AFC Bournemouth,3-1
+34,Crystal Palace FC,West Ham United FC,5-2
+34,Fulham FC,Liverpool FC,1-3
+29,Arsenal FC,Chelsea FC,5-0
+29,Wolverhampton Wanderers FC,AFC Bournemouth,0-1
+29,Crystal Palace FC,Newcastle United FC,2-0
+29,Everton FC,Liverpool FC,2-0
+29,Manchester United FC,Sheffield United FC,4-2
+29,Brighton & Hove Albion FC,Manchester City FC,0-4
+35,West Ham United FC,Liverpool FC,2-2
+35,Fulham FC,Crystal Palace FC,1-1
+35,Manchester United FC,Burnley FC,1-1
+35,Newcastle United FC,Sheffield United FC,5-1
+35,Wolverhampton Wanderers FC,Luton Town FC,2-1
+35,Everton FC,Brentford FC,1-0
+35,Aston Villa FC,Chelsea FC,2-2
+35,AFC Bournemouth,Brighton & Hove Albion FC,3-0
+35,Tottenham Hotspur FC,Arsenal FC,2-3
+35,Nottingham Forest FC,Manchester City FC,0-2
+26,Chelsea FC,Tottenham Hotspur FC,2-0
+36,Luton Town FC,Everton FC,1-1
+36,Arsenal FC,AFC Bournemouth,3-0
+36,Brentford FC,Fulham FC,0-0
+36,Burnley FC,Newcastle United FC,1-4
+36,Sheffield United FC,Nottingham Forest FC,1-3
+36,Manchester City FC,Wolverhampton Wanderers FC,5-1
+36,Brighton & Hove Albion FC,Aston Villa FC,1-0
+36,Chelsea FC,West Ham United FC,5-0
+36,Liverpool FC,Tottenham Hotspur FC,4-2
+36,Crystal Palace FC,Manchester United FC,4-0
+37,Fulham FC,Manchester City FC,0-4
+37,AFC Bournemouth,Brentford FC,1-2
+37,Everton FC,Sheffield United FC,1-0
+37,Newcastle United FC,Brighton & Hove Albion FC,1-1
+37,Tottenham Hotspur FC,Burnley FC,2-1
+37,West Ham United FC,Luton Town FC,3-1
+37,Wolverhampton Wanderers FC,Crystal Palace FC,1-3
+37,Nottingham Forest FC,Chelsea FC,2-3
+37,Manchester United FC,Arsenal FC,0-1
+37,Aston Villa FC,Liverpool FC,3-3
+34,Tottenham Hotspur FC,Manchester City FC,0-2
+34,Brighton & Hove Albion FC,Chelsea FC,1-2
+34,Manchester United FC,Newcastle United FC,3-2
+38,Arsenal FC,Everton FC,2-1
+38,Brentford FC,Newcastle United FC,2-4
+38,Brighton & Hove Albion FC,Manchester United FC,0-2
+38,Burnley FC,Nottingham Forest FC,1-2
+38,Chelsea FC,AFC Bournemouth,2-1
+38,Crystal Palace FC,Aston Villa FC,5-0
+38,Liverpool FC,Wolverhampton Wanderers FC,2-0
+38,Luton Town FC,Fulham FC,2-4
+38,Manchester City FC,West Ham United FC,3-1
+38,Sheffield United FC,Tottenham Hotspur FC,0-3

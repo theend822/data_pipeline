@@ -22,10 +22,11 @@ services:
     command: -c "airflow db init"
     volumes:
       - ./airflow:/opt/airflow
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__LOAD_EXAMPLES: False
+      # AIRFLOW__CORE__LOAD_EXAMPLES: False
     depends_on:
       postgres:
         condition: service_healthy
@@ -43,6 +44,7 @@ services:
         - ./data:/opt/data
         - ./dbt:/opt/dbt
         - ./visualization:/opt/visualization
+        - /var/run/docker.sock:/var/run/docker.sock
       environment:
         AIRFLOW__CORE__EXECUTOR: LocalExecutor
         AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
@@ -65,6 +67,7 @@ services:
       - ./airflow:/opt/airflow
       - ./data:/opt/data
       - ./dbt:/opt/dbt
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
