@@ -25,16 +25,10 @@ services:
       ports:
         - "8080:8080"
       volumes:
-        - ./airflow/dags:/opt/airflow/dags
-        - ./airflow/plugins:/opt/airflow/plugins
-        - ./airflow/data_operator:/opt/airflow/data_operator
-        - ./airflow/config.py:/opt/airflow/config.py
-        - ./.env:/opt/airflow/.env
-        - ./data:/opt/airflow/data
-        - ./dbt:/opt/airflow/dbt
-        - ./metadata:/opt/airflow/metadata
-        - ./airflow/database:/opt/airflow/database
-        - ./airflow/raw_data:/opt/airflow/raw_data
+        - ./airflow:/opt/airflow
+        - ./data:/opt/data
+        - ./dbt:/opt/dbt
+        - ./visualization:/opt/visualization
       environment:
         AIRFLOW__CORE__EXECUTOR: LocalExecutor
         AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
@@ -43,10 +37,6 @@ services:
         POSTGRES_DB: ${POSTGRES_DB}
         POSTGRES_HOST: ${POSTGRES_HOST}
         POSTGRES_PORT: ${POSTGRES_PORT}
-        DBT_PROFILES_DIR: /opt/airflow/dbt/
-        DBT_PROJECT_DIR: /opt/airflow/dbt/
-        DATA_DIR: /opt/airflow/data
-        METADATA_DIR: /opt/airflow/metadata
       command: webserver
       restart: always
   
