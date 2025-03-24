@@ -53,14 +53,14 @@ def process_data(input_raw, output_csv):
             print(f"Skipping malformed line: {line}")
             continue
 
-        with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ["matchday", "home_team", "away_team", "score"]
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            
-            # Write header
-            writer.writeheader()
-            
-            # Write data rows
-            writer.writerows(matches)
+    with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ["matchday", "home_team", "away_team", "score"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        # Write header
+        writer.writeheader()
+        
+        # Write data rows
+        writer.writerows(matches)
     
         # print(f"Processed {len(matches)} matches and saved to {output_csv}")

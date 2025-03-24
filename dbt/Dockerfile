@@ -7,5 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Chain dbt test and dbt run 
-CMD ["sh", "-c", "dbt test --fail-fast && dbt run"]
+# you're essentially telling the container to watch for new content in a file that never changes and never has any content
+# if no task to run, container will shut down immediately. however, we will manually trigger transformation task in airflow and the timing is not fixed. therefore, need the container to be up and runnig
+CMD ["tail", "-f", "/dev/null"]

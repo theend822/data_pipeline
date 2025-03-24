@@ -52,6 +52,7 @@ services:
   
   dbt:
     build: dbt/
+    image: pl_dbt
     depends_on:
       - postgres
     volumes:

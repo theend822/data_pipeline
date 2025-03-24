@@ -1,14 +1,15 @@
 from airflow import DAG
-from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.operators.python import PythonOperator
-from airflow.providers.docker.operators.docker import DockerOperator
+from airflow.operators.bash import BashOperator
 from datetime import datetime
 import os
-from opt.airflow.config import pipeline_config
-from opt.airflow.data_operator import download_data
-from opt.airflow.data_operator import process_data
-from opt.airflow.data_operator import ingest_data
-from opt.airflow.database.create_pg_table import create_pg_table
+import sys
+sys.path.append("/opt/airflow")
+from config import pipeline_config
+from data_operator import download_data
+from data_operator import process_data
+from data_operator import ingest_data
+from database.create_pg_table import create_pg_table
 
 default_args = {
     "owner": "airflow",
@@ -41,7 +42,7 @@ with DAG (
         },
     )
 
-    create_table = SQLExecuteQueryOperator(
+    create_table = PythonOperator(
         task_id='create_table',
         python_callable=create_pg_table,
         op_kwargs = {
@@ -54,15 +55,13 @@ with DAG (
         python_callable=ingest_data,
         op_kwargs={
             "file_path":pipeline_config['processed_data_path'], 
-            "table_name":pipeline_config['table_name'],
+            "table_name":pipeline_config['table'],
         },
     )
 
-    dbt_task = DockerOperator(
+    dbt_transformation_task = BashOperator(
         task_id="dbt_execute",
-        image="dbt",
-        docker_url="unix://var/run/docker.sock",
-        volumes=["/opt/airflow/dbt:/opt/dbt"],  # Adjust host path
+        bash_command="docker exec pl_dbt dbt test --fail-fast && docker exec pl_dbt dbt run"
     )
 
-    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_task 
+    download_data_task >> process_data_task >> create_table >> ingest_data_task >> dbt_transformation_task 
