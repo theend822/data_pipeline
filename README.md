@@ -10,8 +10,8 @@ A python data pipeline built on Docker, orchestrated by Airflow, to
 
 ## Pipeline Results
 
-![2324 Premier League Standing Table](https://drive.google.com/file/d/1ifmppqHphlt8NMX3xKwZsDo0KSK8aE3c/view?usp=sharing)
-![Chelsea No Good](https://drive.google.com/file/d/14jxxV1HI-MRChDolpmaWeNQsYgKj1npP/view?usp=sharing)
+![2324 Premier League Standing Table](https://drive.google.com/uc?export=view&id=1ifmppqHphlt8NMX3xKwZsDo0KSK8aE3c)
+![Chelsea No Good](https://drive.google.com/uc?export=view&id=1_0_Vn1ngMVZuEHZ7fF2YqHAt0x5nQGH7)
 
 ## Learning points
 - Airflow scheduler is a must to see the DAG pipeline in Airflow UI
